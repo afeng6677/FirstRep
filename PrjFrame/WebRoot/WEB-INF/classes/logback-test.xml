@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+	<contextName>PrjFrame</contextName>
+	<property file="../webapps/PrjFrame/WEB-INF/classes/druid.properties" />
+	<jmxConfigurator />
+	<!-- direct log messages to stdout -->
+	<appender name="stdout"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<Target>System.out</Target>
+		<encoder>
+			<pattern>
+				<!-- %d{HH:mm:ss.SSS} [%t] %5p |-%c{35}:%L - %m %n -->
+				%d{HH:mm:ss.SSS} [%t] %5p |-%c{35}:%logger{35} - %m %n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="file"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>..\logs\PrjFrame.log</file>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>
+				xjh.%d{yyyy-MM-dd}.log.gz
+			</FileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>
+				%d{HH:mm:ss.SSS} [%t] %5p |-%c{35}:%L - %m %n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="dbmysql" class="ch.qos.logback.classic.db.DBAppender">  
+        <connectionSource class="ch.qos.logback.core.db.DriverManagerConnectionSource">  
+            <driverClass>com.mysql.jdbc.Driver</driverClass>  
+            <url>${datasource.url}</url>
+            <user>${datasource.username}</user>
+            <password>${datasource.password}</password>
+        </connectionSource>  
+    </appender>
+	
+	<logger name="freemarker" level="INFO" />
+	<logger name="net.sf.ehcache" level="INFO" />
+	<logger name="org.apache" level="WARN" />
+	<logger name="org.springframework" level="WARN" />
+	<logger name="org.logicalcobwebs.proxool" level="INFO" />
+	<logger name="org.hibernate" level="WARN" />
+	
+	<appender name="ASYNC"
+		class="ch.qos.logback.classic.AsyncAppender">
+		<appender-ref ref="stdout" />
+	</appender>
+
+	<root level="DEBUG">
+		<appender-ref ref="ASYNC" />
+		<appender-ref ref="dbmysql" />
+	</root>
+</configuration>

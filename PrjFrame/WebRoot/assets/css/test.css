@@ -1,0 +1,120 @@
+.serActive{
+    border-bottom:3px solid #F25022;
+}
+.myTab>li{
+	float: left;
+	width: 25%;
+	text-align: center;
+	cursor: pointer;
+}
+.li-item{
+	display: none;
+	width: 98%;
+	height: 170px;
+	margin: auto;
+}
+
+
+.myForm input[type="text"]{
+	width : 180px;
+}
+.myForm input[type="radio"]{
+	width : 20px;
+	margin: 10px 0 0;
+}
+.form-group .borderInput{border: 1px solid rgba(255,255,255,0.5);}
+.form-group .readOnlyInput{color: #fff}
+.form-group .readOnlyInput:focus{color: #fff}
+.form-group .has-error .control-label{color:#f25021}
+.form-group .has-error input{color:rgba(242,80,33,.7);border-color:#f25021}
+.form-group .has-error .help-block{color:#f25021}
+
+
+.ztreeContent {
+	position: absolute;
+	z-index: 9999;
+	background-color: #f1f2f6;
+	display: none;
+	border: 1px solid #c0c0c0;
+	margin-left: 40px;
+	margin-top: 0px;
+}
+
+.ztreeContent .ztree {
+	height: 127px;
+	width: 180px;
+	overflow: auto;
+	border: 0px solid #6a6868;
+	border-radius: 1px;
+	box-shadow: transparent;
+	background-color: #f2f2f2;
+}
+
+
+.select-file {
+	display: block;
+	margin-left: 10px;
+	margin-top: 10px;
+	font-size: 12px;
+	height:380px;
+	width:98%;
+	overflow: auto;
+	
+}
+
+.file-input {
+	border: 1px solid #c0c0c0;
+	width: 140px;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 5px;
+	margin-left:0px;
+	font-size: 15px;
+	color: #2d2d2d;
+	display: inline-block;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.file_group {
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.file_info {
+    padding-top: 6px;
+    width: 100%;
+}
+.file_infos {
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.filedetail {
+    border: 1px solid #c0c0c0;
+    height: 86px;
+    position: relative;
+    width: 360px;
+}
+.filedetail .delefile {
+    display: block;
+    font-size: 12px;
+    height: 86px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 86px;
+}
+.deleimg {
+    background: rgba(0, 0, 0, 0) url("images/dele_info_icon.png") no-repeat scroll 0 0;
+    height: 28px;
+    margin-left: 28.5px;
+    margin-top: 16px;
+    width: 29px;
+}
+.delefile p {
+    margin-top: 8px;
+}

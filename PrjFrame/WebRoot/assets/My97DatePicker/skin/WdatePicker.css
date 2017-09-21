@@ -1,0 +1,13 @@
+.Wdate{
+	background:url("datepickericon.png") right 5px center #fff no-repeat;
+	border:1px solid #bbc1c7;
+	color: #2d2d2d;
+    outline: none;
+    height: 17px;
+    padding-right: 3px;
+    cursor: pointer;
+}
+.Wdate:disabled {
+	background-color: rgb(235, 235, 228);
+}
+

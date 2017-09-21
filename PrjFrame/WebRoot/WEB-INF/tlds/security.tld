@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+    version="2.1">
+
+	<!-- 标签库的版本号 -->
+
+	<tlib-version>1.0</tlib-version>
+
+	<!-- 标签库的默认前缀 -->
+
+	<short-name>security</short-name>
+
+	<!-- 标签库的默认URI -->
+
+	<uri>/security</uri>
+	<!-- 是否显示标签体 -->
+	<tag>
+		<description>
+			标签内容是否显示
+		</description>
+		<name>show</name>
+		<tag-class>com.PrjFrame.base.tags.ShowTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<type>String</type>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<description>
+			标签事件是否可用
+		</description>
+        <name>usable</name>
+        <tag-class>com.PrjFrame.base.tags.UsableTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+			<name>name</name>
+			<required>true</required>
+			<type>String</type>
+		</attribute>
+    </tag>
+</taglib>
